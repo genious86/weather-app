@@ -30,6 +30,12 @@ weatherform.addEventListener("submit",async event =>{
 })
 
 async function getWeatherData(city) {
+
+    const api_url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`
+
+    const response = await fetch(api_url)
+
+    console.log(response)
     
 }
 
