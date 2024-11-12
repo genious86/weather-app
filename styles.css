@@ -20,3 +20,28 @@ body {
     margin: 10px;
     width: 300px;
 }
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 3rem;
+    background-color: hsl(180, 100%, 30%);
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover{
+    background-color: hsl(180, 100%, 40%);
+}
+
+.card {
+    background: linear-gradient(180deg, hsl(210, 100%, 75%), hsl(40, 100%, 75%));
+    padding: 50px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 0% ,50%);
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
