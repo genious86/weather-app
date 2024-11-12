@@ -3,13 +3,24 @@ const cityinput = document.querySelector(".cityinput")
 const card = document.querySelector(".card")
 const api_key = "ddaf05d18883b4b53664ed4f6dca9f0e"
 
-weatherform.addEventListener("submit", event =>{
+weatherform.addEventListener("submit",async event =>{
 
     event.preventDefault()
 
     const city =cityinput.value
 
     if(city) {
+
+        try{
+            const WeatherData = await getWeatherData(city)
+            displayWeatherInfo(WeatherData)
+        }
+
+        catch(error){
+            console.log(error)
+            displayError(error)
+        }
+        
 
     }
 
@@ -37,4 +48,6 @@ function displayError(message){
     Error_display.classList.add("Error_display")
 
     card.textContent = ""
+    card.style.display = "flex"
+    card.appendChild(Error_display)
 }
